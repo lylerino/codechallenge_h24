@@ -43,13 +43,13 @@ return true;
 					};
 					if (checkSentence(sentence) === false){ //what to do if not a pangram
 						//finding out the difference bewtween the letters of the alphabet and the letters of the sentence
-					var alphabet = [												//creating array of alphabet
+					var alphabet = [	//creating array of alphabet
 					"a", "b", "c", "d", "e", "e", "e", "f", "g", "h", "i",
 					"j", "k", "l", "m", "n", "o", "p", "q","r","s","t","u",
 					"v","w","x","y","z"
 					]
 					Array.prototype.diff = function (a) { //creating a prototype that arrays can follow when .diff is used
-						   return this.filter(function (i) { //I'm not sure exactly what 'this' refers to here (but it works!),filter creates array of elements are in both arrays					 																	 test
+						   return this.filter(function (i) { //I'm not sure exactly what 'this' refers to here (but it works!),filter creates array of elements that are in both arrays					 																	 test
 						       return a.indexOf(i) === -1; //indexOf checks each letters of the a function in the i function and
 									 //returns array of letters that don't appear in the array -> value -1 = no position, missing
 						   });
