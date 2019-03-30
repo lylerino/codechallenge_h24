@@ -28,7 +28,7 @@ return true;
 				console.log(checkSentence(sentence));
           //if the function returns true then the sentence is a pangram and we can output a confirmation message
 					if (checkSentence(sentence) === true){ //what to do if a pangram
-						document.write(sentence + " => This sentence is a pangram!") //confirmation message
+						window.alert(sentence + " => This sentence is a pangram!") //confirmation message
 					};
 					if (checkSentence(sentence) === false){ //what to do if not a pangram
 						//finding out the difference bewtween the letters of the alphabet and the letters of the sentence
@@ -46,7 +46,7 @@ return true;
 					};
 					console.log(alphabet.diff(sentence_list)); // show letters of alphabet substracted by letters of prior created sentence_list
 					var missLet = alphabet.diff(sentence_list); //defining the difference as missing letters, missLet
-					document.write("Your sentence is not a pangram! The following letters are missing: " + missLet)
+					window.alert("Your sentence is not a pangram! The following letters are missing: " + missLet)
 					//output message that sentence is not a pangram + the missing letters
 
 				}
