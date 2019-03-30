@@ -16,7 +16,8 @@ Process:
 First I needed to find out what a pangram was. Pangram is a sentence that contains every letter of the alphabet at least once.
 I devided the task into two bigger steps: 
 1. writing a script that checks if an input sentence contains every letter from a-z at least once and returns a message if it does.
-2. then writing the script that runs when the input sentence isn't a pangram, which checks and outputs which letters are missing from the input in order for it to be a vadlid pangram. 
+2. then writing the script that runs when the input sentence isn't a pangram, which checks and outputs which letters are missing from 
+the input in order for it to be a vadlid pangram. 
 
 For step one, I thought the easiest way to check if every letter of the alphabet is in a sentence, is to remove duplicates, 
 punctuation and spaces and place all the characters in an alphabetical order and then check if we get a list of 26 letters (
