@@ -6,7 +6,7 @@ A: A pangram is a sentence that contains every letter of the alphabet at least o
 This code can find out if a sentence is a pangram or not and help you write a pangram by telling you which letters are missing from a sentence in order for it to be pangram.
 
 How to use:
-1. Save the script as a html file to your computer
+1. Save the script as a html file to your computer (either of the scripts work, I just like having html around stuff sometimes)
 2. Right click the script and click "open with", then choose any code editor or just the regular windows editor
 3. Scroll aaaaall the way down to the line that starts with var sentence = ""
 4. Type any english sentence between the "" and save the script, do NOT use any characters from other languages or numbers in your sentence, this script is kind of monolingual ;)
