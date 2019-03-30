@@ -49,8 +49,7 @@ return true;
 					"v","w","x","y","z"
 					]
 					Array.prototype.diff = function (a) { //creating a prototype that arrays can follow when .diff is used
-						   return this.filter(function (i) { //I'm not sure exactly what 'this' refers to here (but it works!),
-							 																	//filter creates array of elements that pass test
+						   return this.filter(function (i) { //I'm not sure exactly what 'this' refers to here (but it works!),filter creates array of elements are in both arrays					 																	 test
 						       return a.indexOf(i) === -1; //indexOf checks each letters of the a function in the i function and
 									 //returns array of letters that don't appear in the array -> value -1 = no position, missing
 						   });
