@@ -24,6 +24,6 @@ punctuation and spaces and place all the characters in an alphabetical order and
 number of letters of the english alphabet), because if we have 26 different letters the sentence is a pangram and we can output a 
 confirmation message. 
 For step two, the sentence has less than 26 letters and the best way to find out which letters are missing is to take the list of
-all 26 letters in the alphabet and substract all the input sentence'S letters  from them ("alphabet letter minus our letters"). 
+all 26 letters in the alphabet and substract all the input sentence's letters from them ("alphabet letter minus our letters"). 
 This should leave us with the letters that are missing in our sentence. The last thing to do would be to output a message with the
 missing letters.
