@@ -1,7 +1,7 @@
 Thank you for trying out the pangram checker!
 
 Q: What is a pangram? 
-A: A pangram is a sentence that contains every letter of the alphabet at least once.
+A: A pangram is a sentence that contains every letter of the alphabet at least once. For example: "Sphinx of black quartz, judge my vow."
 
 This code can find out if a sentence is a pangram or not and help you write a pangram by telling you which letters are missing from a sentence in order for it to be pangram.
 
