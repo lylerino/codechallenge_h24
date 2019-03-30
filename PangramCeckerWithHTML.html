@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+	<html lang=en>
+		<head>
+			<title>Pangram checker</title>
+<script>
+		 function checkSentence(str){  //creating a function that should check if any sentence within a string is a pangram
+
+str = str.toLowerCase(); //convert every letter to lower case
+console.log(str);
+str = str.replace(/\s/g,''); //remove spaces
+console.log(str);
+str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""); //empty string removes punctuation
+console.log(str);
+
+//create sorted list of all characters
+sentence_list = str.split("").sort(); //splits string into an array, empty "" splits between each character
+console.log(sentence_list);
+
+//remove duplicates
+sentence_list = [...new Set(sentence_list)]; //Set stores unique values, removes duplicates like aa,bb
+console.log(sentence_list);
+
+//now the list should contain all the letters in the sentence in alphabetical order.
+
+for(i=0;i<26;i++){ //looping through string 26 times, start at 0, move by 1
+	if((i+10).toString(36)!= sentence_list[i]) 	//(i=10).toString(36) gives a for i=0, b for i=1 etc in string. (i+10 and string length 36 because we don't want to count numbers from 0-9, only letters)
+		return false; 	//if the sentence list does not have all letters 26 letters of the alphabet this returns false
+		}
+return true;
+};
+
+</script>
+
+		</head>
+			<body>
+				<script>
+
+				var sentence = "I like to code when I am at home in front of my computer!"; //here we input the sentence that we want to check
+				console.log(checkSentence(sentence));
+          //if the function returns true then the sentence is a pangram and we can output a confirmation message
+					if (checkSentence(sentence) === true){ //what to do if a pangram
+						document.write(sentence + " => This sentence is a pangram!") //confirmation message
+					};
+					if (checkSentence(sentence) === false){ //what to do if not a pangram
+						//finding out the difference bewtween the letters of the alphabet and the letters of the sentence
+					var alphabet = [												//creating array of alphabet
+					"a", "b", "c", "d", "e", "e", "e", "f", "g", "h", "i",
+					"j", "k", "l", "m", "n", "o", "p", "q","r","s","t","u",
+					"v","w","x","y","z"
+					]
+					Array.prototype.diff = function (a) { //creating a prototype that arrays can follow when .diff is used
+						   return this.filter(function (i) { //I'm not sure exactly what 'this' refers to here (but it works!),
+							 																	//filter creates array of elements that pass test
+						       return a.indexOf(i) === -1; //indexOf checks each letters of the a function in the i function and
+									 //returns array of letters that don't appear in the array -> value -1 = no position, missing
+						   });
+					};
+					console.log(alphabet.diff(sentence_list)); // show letters of alphabet substracted by letters of prior created sentence_list
+					var missLet = alphabet.diff(sentence_list); //defining the difference as missing letters, missLet
+					document.write("Your sentence is not a pangram! The following letters are missing: " + missLet)
+					//output message that sentence is not a pangram + the missing letters
+
+				}
+				</script>
+
+			</body>
+	</html>

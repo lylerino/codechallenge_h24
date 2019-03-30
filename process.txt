@@ -1,0 +1,22 @@
+Task 3, Pangram checker:
+
+Write a program / script which checks if a given sentence is a pangram or not.
+Additionally the program / script should print which letters are missing (if the sentence is not a valid pangram).
+
+one value as input:
+- sentence to be checked
+
+should output:
+-indicator, is it a valid pangram or not
+- all missing letters (if not a valid pangram)
+
+
+Process:
+
+First I needed to find out what a pangram was. Pangram is a sentence that contains every letter of the alphabet at least once.
+I devided the task into two bigger steps: 
+1. writing a script that checks if an input sentence contains every letter from a-z at least once and returns a message if it does.
+2. then writing the script that runs when the input sentence isn't a pangram, which checks and outputs which letters are missing from the input in order for it to be a vadlid pangram. 
+
+For step one, I thought the easiest way to check if every letter of the alphabet is in a sentence, is to remove duplicates, punctuation and spaces and place all the characters in an alphabetical order and then check if we get a list of 26 letters (number of letters of the english alphabet), because if we have 26 different letters the sentence is a pangram and we can output a confirmation message. 
+For step two, the sentence has less than 26 letters and the best way to find out which letters are missing is to take the list of all 26 letters in the alphabet and substract all the input sentence'S letters  from them ("alphabet letter minus our letters"). This should leave us with the letters that are missing in our sentence. The last thing to do would be to output a message with the missing letters.
